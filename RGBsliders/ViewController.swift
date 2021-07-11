@@ -26,9 +26,9 @@ class ViewController: UIViewController {
     }
     
     func gradiationLabels() {
-        redGradationLabel.text = String(redSlider.value)
-        greenGradationLabel.text = String(greenSlider.value)
-        blueGradationLabel.text = String(blueSlider.value)
+        redGradationLabel.text = String(round(redSlider.value * 100) / 100)
+        greenGradationLabel.text = String(round(greenSlider.value * 100) / 100)
+        blueGradationLabel.text = String(round(blueSlider.value * 100) / 100)
     }
     
     func changeColor() {
