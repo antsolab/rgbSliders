@@ -8,6 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
     @IBOutlet weak var colorView: UIView!
     
     @IBOutlet weak var redSlider: UISlider!
@@ -20,16 +21,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        gradiationLabels()
+        setGradationLabels()
         changeColor()
-        
-        colorView.layer.cornerRadius = 10
-
         redSlider.tintColor = .red
         greenSlider.tintColor = .green
+        colorView.layer.cornerRadius = 10
     }
     
-    private func gradiationLabels() {
+    private func setGradationLabels() {
         redGradationLabel.text = String(format: "%.2f", redSlider.value)
         greenGradationLabel.text = String(format: "%.2f", greenSlider.value)
         blueGradationLabel.text = String(format: "%.2f", blueSlider.value)
@@ -42,13 +41,10 @@ class ViewController: UIViewController {
                                             alpha: 1)
     }
     
-    
-    
-    @IBAction func rgbView() {
+    @IBAction func rgbSlidersAction() {
         changeColor()
-        gradiationLabels()
+        setGradationLabels()
     }
     
-
 }
 
