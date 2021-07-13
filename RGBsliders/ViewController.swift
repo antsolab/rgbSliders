@@ -25,16 +25,16 @@ class ViewController: UIViewController {
         changeColor()
         redSlider.tintColor = .red
         greenSlider.tintColor = .green
-        colorView.layer.cornerRadius = 10
+        colorView.layer.cornerRadius = 15
     }
     
-    private func setGradationLabels() {
+     func setGradationLabels() {
         redGradationLabel.text = String(format: "%.2f", redSlider.value)
         greenGradationLabel.text = String(format: "%.2f", greenSlider.value)
         blueGradationLabel.text = String(format: "%.2f", blueSlider.value)
     }
     
-    private func changeColor() {
+     func changeColor() {
         colorView.backgroundColor = UIColor(red: CGFloat(redSlider.value),
                                             green: CGFloat(greenSlider.value),
                                             blue: CGFloat(blueSlider.value),
@@ -46,5 +46,9 @@ class ViewController: UIViewController {
         setGradationLabels()
     }
     
+    
 }
+
+
+
 
